@@ -1,7 +1,10 @@
 header {
-  background-color: burlywood;
+  background-color: olive;
+  display: block;
 }
 
 body {
   background-color: aqua;
+  margin: 0;
+  
 }
