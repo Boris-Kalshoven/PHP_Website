@@ -1,37 +1,47 @@
-<div id="form">
-    <h1>Login</h1>
-    <form name="f1" action="authentication.php" onsubmit="return validation()" method="post">
-    <p>
+<link rel="stylesheet" href="styles.css" />
+<div id="loginBackground">
+  <div id="form">
+    <h1 id="loginTitle">Login</h1>
+    <form
+      name="f1"
+      action="authentication.php"
+      onsubmit="return validation()"
+      method="post"
+    >
+      <p>
         <label>Username: </label>
-        <input type="text" id="user" name="user">
-    </p>
-    <p>
+        <input type="text" id="user" name="user" />
+      </p>
+      <p>
         <label>Password: </label>
-        <input type="text" id="pass" name="pass">
-    </p>
-    <p>
-        <input type="submit" id="btn" value="Login">
-    </p>
+        <input type="text" id="pass" name="pass" />
+      </p>
+      
+      <p id="loginBtn">
+        <input type="submit" id="btn" value="Login" />
+      </p>
     </form>
+  </div>
 </div>
 
 <script>
-    function validation(){
-        // get the value from the form to validate
-        var un=document.f1.user.value;
-        var pw=document.f1.pass.value;
-        if(un.length==""&&pw.length==""){
-            alert("Username and password are empty.");
-            return false;
-        } else {
-            if(un.length==""){
-                alert("Username is empty");
-                return false;
-            }
-            if(pw.length==""){
-                alert("Password is empty");
-                return false;
-            }
-        }
+  function validation() {
+    // get the value from the form to validate
+    var un = document.f1.user.value;
+    var pw = document.f1.pass.value;
+
+    if (un.length == "" && pw.length == "") {
+      alert("Username and password are empty.");
+      return false;
+    } else {
+      if (un.length == "") {
+        alert("Username is empty");
+        return false;
+      }
+      if (pw.length == "") {
+        alert("Password is empty");
+        return false;
+      }
     }
+  }
 </script>
