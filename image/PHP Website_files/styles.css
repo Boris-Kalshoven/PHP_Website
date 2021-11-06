@@ -2,20 +2,15 @@
   font-family: sans-serif;
 }
 header {
-  background-color: lightseagreen;
-  display: flex;
+  background-color: olive;
+  display: block;
 }
-
 
 body {
   background-color: aqua;
   margin: 0;
   background-image: url("image/indexBackground.jpg");
   background-position: center;
-}
-#indexBody {
-  text-align: center;
-vertical-align: middle;
 }
 
 #form {
@@ -60,27 +55,4 @@ vertical-align: middle;
 #loginBody {
   background-image: url("image/login\ background.jpg");
   background-position: center;
-}
-
-#navigation {
-  width: 100%;
-  overflow: auto;
-}
-
-#navigation a {
-  padding-top: 2%;
-  padding-bottom: 2%;
-  float: left;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  width: 33.33%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
-  border-top: aqua;
-  border-width: 5px;
-  border-style: solid none none none;
-}
-
-
-#navigation a:hover, #navigation a:focus {
-  background-color: rgba(255, 255, 255, 0.3);
 }

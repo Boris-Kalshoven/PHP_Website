@@ -1,29 +1,45 @@
 <link rel="stylesheet" href="styles.css" />
-<div id="loginBackground">
-  <div id="form">
-    <h1 id="loginTitle">Login</h1>
-    <form
-      name="f1"
-      action="authentication.php"
-      onsubmit="return validation()"
-      method="post"
-    >
-      <p>
-        <label>Username: </label>
-        <input type="text" id="user" name="user" />
-      </p>
-      <p>
-        <label>Password: </label>
-        <input type="text" id="pass" name="pass" />
-      </p>
-      
-      <p id="loginBtn">
-        <input type="submit" id="btn" value="Login" />
-      </p>
-    </form>
-  </div>
-</div>
+<body id="loginBody">
+  <div id="loginBackground">
+    <div id="form">
+      <h1 id="loginTitle">Login</h1>
+      <form
+        name="f1"
+        action="authentication.php"
+        onsubmit="return validation()"
+        method="post"
+      >
+        <p>
+          <label>Username: </label>
+          <input
+            type="text"
+            id="user"
+            name="user"
+            required
+            title="This field is required"
+            oninvalid="this.setCustomValidity('Vul ff in joh ^^')" onchange="this.setCustomValidity('')"
+          />
+        </p>
+        <p>
+          <label>Password: </label>
+          <input
+            type="password"
+            id="pass"
+            name="pass"
+            required
+            title="This field is required"
 
+            oninvalid="this.setCustomValidity('Vergeet je deze ook niet? ^^')" onchange="this.setCustomValidity('')"
+          />
+        </p>
+
+        <p id="loginBtn">
+          <input type="submit" id="btn" value="Login" />
+        </p>
+      </form>
+    </div>
+  </div>
+</body>
 <script>
   function validation() {
     // get the value from the form to validate
