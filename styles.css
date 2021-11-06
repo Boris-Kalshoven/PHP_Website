@@ -1,21 +1,61 @@
 * {
-  font-family: sans-serif;
+  box-sizing: border-box;
 }
-header {
-  background-color: lightseagreen;
-  display: flex;
-}
-
 
 body {
   background-color: aqua;
   margin: 0;
   background-image: url("image/indexBackground.jpg");
   background-position: center;
+  font-family: sans-serif;
 }
-#indexBody {
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'left middle right'
+    'footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.header {
+  grid-area: header;
+  background-color: lightseagreen;
+}
+
+#indexBody-middle {
+  grid-area: middle;
+  padding: 20px;
+  height: 200px;
   text-align: center;
-vertical-align: middle;
+}
+
+.left {
+  grid-area: left;
+  padding: 20px;
+  height: 200px;
+  text-align: center;
+  background-color: rgba(224, 19, 19, 0.6);
+}
+
+.right {
+  grid-area: right;
+  padding: 20px;
+  height: 200px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  text-align: center;
 }
 
 #form {
