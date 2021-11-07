@@ -6,6 +6,7 @@
 
 <!-- Turn off all error reporting -->
 <?php error_reporting(0); ?>
+
 <!-- Script for uploading an image -->
 <?php
 include('dbconnection.php');
@@ -36,7 +37,6 @@ if (isset($_POST['upload'])) {
         $msg = "Failed to upload image...";
     }
 }
-
 ?>
 
 <!-- Get the footer file -->
