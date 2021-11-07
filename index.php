@@ -23,7 +23,7 @@ if (isset($_POST['upload'])) {
     $fileError = $_FILES['uploadfile']['error'];
     // Reference variable for local image path
     $folder = "image/" . $filename;
-    
+    // Query to upload image to PHPMyAdmin
     $sql = "INSERT INTO image (filename) VALUES ('$filename')";
 
     // Execute query
@@ -41,6 +41,3 @@ if (isset($_POST['upload'])) {
 
 <!-- Get the footer file -->
 <?php echo file_get_contents("html/footer.html"); ?>
-
-<!-- Copyright message with auto increment of the current year -->
-<p>Copyright © Boris Kalshoven <?php echo date("Y") ?></p>

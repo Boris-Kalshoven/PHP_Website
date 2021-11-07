@@ -1,26 +1,31 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
+}
+
+html {
+  height: 100%;
 }
 
 body {
   background-color: aqua;
-  margin: 0;
   background-image: url("image/indexBackground.jpg");
   background-position: center;
   font-family: sans-serif;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  width: 100%;
 }
-
-
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header'
-    'left middle right'
-    'footer footer footer';
+    "header header header"
+    "left middle right"
+    "footer footer footer";
   grid-gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
+  background-color: #2196f3;
 }
 
 .header {
@@ -33,6 +38,10 @@ body {
   padding: 20px;
   height: 200px;
   text-align: center;
+}
+
+section {
+ display: grid;
 }
 
 .left {
@@ -54,7 +63,12 @@ body {
 .footer {
   grid-area: footer;
   background-color: rgba(255, 255, 255, 0.3);
-  padding: 10px;
+  width: 100%;
+  height: 40px;
+  padding-top: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   text-align: center;
 }
 
@@ -63,10 +77,9 @@ body {
   margin: 10% 30% 15%;
   text-align: center;
   border-radius: 5px;
-  
 }
 
-#loginBtn{
+#loginBtn {
   text-align: right;
   padding: 1em;
 }
@@ -77,14 +90,30 @@ body {
   border: none;
 }
 
-#btn:hover, #btn:focus {
+#btn:hover,
+#btn:focus {
   background: rgba(0, 255, 21, 0.6);
 }
 
+#btn:active {
+  background: rgba(0, 255, 21, 0.8);
+}
 
 #loginTitle {
   padding: 1em;
   background: rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+#user, #pass  {
+  /* background-color: transparent; */
+  border-radius: 5px;
+}
+
+/* #user, #user:hover, #user:focus, #pass, #pass:hover, #pass:focus { */
+
+#user:hover input{
+  color: #0000FF;
 }
 
 #errorBody {
@@ -96,10 +125,23 @@ body {
   text-align: center;
   padding-top: 10%;
 }
-
+/* TODO: Uitzoeken waarom die min-height werkt... */
 #loginBody {
-  background-image: url("image/login\ background.jpg");
+  background-image: url("image/loginBackground.jpg");
   background-position: center;
+  min-height: 1px; 
+}
+
+#lblUsername {
+  font-size: 20px;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+
+
+#lblPassword {
+  font-size: 20px;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
 
 #navigation {
@@ -120,7 +162,7 @@ body {
   border-style: solid none none none;
 }
 
-
-#navigation a:hover, #navigation a:focus {
+#navigation a:hover,
+#navigation a:focus {
   background-color: rgba(255, 255, 255, 0.3);
 }

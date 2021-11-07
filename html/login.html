@@ -8,7 +8,7 @@
     <title>Login</title>
   </head>
   <body id="loginBody">
-    <div id="loginBackground">
+    
       <div id="form">
         <h1 id="loginTitle">Login</h1>
         <form
@@ -18,36 +18,23 @@
           method="post"
         >
           <p>
-            <label>Username: </label>
-            <input
-              type="text"
-              id="user"
-              name="user"
-              required
-              title="This field is required"
+            <label id="lblUsername">Username: </label>
+            <input type="text" id="user" name="user"required title="Je weet het vast wel ;)"
               oninvalid="this.setCustomValidity('Vul ff in joh ^^')"
-              onchange="this.setCustomValidity('')"
-            />
+              onchange="this.setCustomValidity('')"/>
           </p>
           <p>
-            <label>Password: </label>
-            <input
-              type="password"
-              id="pass"
-              name="pass"
-              required
-              title="This field is required"
+            <label id="lblPassword">Password: </label>
+            <input type="password" id="pass" name="pass" required title="Deze is lastiger hea, al die keepass achtige applicaties tegenwoordig."
               oninvalid="this.setCustomValidity('Vergeet je deze ook niet? ^^')"
-              onchange="this.setCustomValidity('')"
-            />
+              onchange="this.setCustomValidity('')"/>
           </p>
-
           <p id="loginBtn">
             <input type="submit" id="btn" value="Login" />
           </p>
         </form>
       </div>
-    </div>
+    
   </body>
   <script>
     function validation() {
