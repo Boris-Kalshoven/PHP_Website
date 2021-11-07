@@ -48,8 +48,9 @@ body {
   text-decoration: none;
   width: 33.33%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
   border-top: aqua;
+  border-bottom: purple;
   border-width: 5px;
-  border-style: solid none none none;
+  border-style: ridge none;
 }
 
 #navigation a:hover, #navigation a:focus {
@@ -69,6 +70,7 @@ body {
   padding: 10px;
   height: 200px;
   text-align: center;
+  background-color: aquamarine;
 }
 
 section {

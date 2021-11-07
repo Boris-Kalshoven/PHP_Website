@@ -8,11 +8,11 @@ $password = $_POST['pass'];
 // logic to prevent mysqli injection
 $username = stripcslashes($username);
 $password = stripcslashes($password);
-$username = mysqli_real_escape_string($db, $username);
-$password = mysqli_real_escape_string($db, $password);
+$username = mysqli_real_escape_string($conn, $username);
+$password = mysqli_real_escape_string($conn, $password);
 
 $sql = "SELECT * FROM account where username='$username' and password='$password'";
-$result = mysqli_query($db, $sql);
+$result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result);
 $count = mysqli_num_rows($result);
 

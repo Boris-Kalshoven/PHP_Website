@@ -1,8 +1,49 @@
+<?php
+// Include auth_session.php file on all user panel pages
+include("auth_session.php");
+?>
+<link rel="stylesheet" href="styles.css" />
 <!-- Get the header file -->
 <?php echo file_get_contents("html/header.html"); ?>
 
-<!-- Get the body file -->
-<?php echo file_get_contents("html/indexBody.html"); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Grid container object -->
+    <div class="grid-container">
+        <div class="left">
+            <h2>Hier komen fotos</h2>
+            <p>yes this is content</p>
+            <p>nog meer</p>
+        </div>
+        <!-- Grid template middle -->
+        <section id="indexBody-middle">
+            <p>Index page content</p>
+            <p>Hello, <?php echo $_SESSION['username']; ?>!</p>
+            <p>Welcome, you have landed on the home page.</p>
+
+            <form method="post" action="" enctype="multipart/form-data">
+                <input type="file" name="uploadfile" value="" />
+                <div>
+                    <button type="submit" name="upload">Upload</button>
+                </div>
+            </form>
+        </section>
+        <div class="right">
+            <h2>hier kun je straks berichten plaatsen</h2>
+            <p>yes this is content</p>
+            <a href="https://medium.com/before-semicolon/50-css-best-practices-guidelines-to-write-better-css-c60807e9eee2">50 Best Practices CSS</a>
+        </div>
+    </div>
+</body>
 
 <!-- Turn off all error reporting -->
 <?php error_reporting(0); ?>
