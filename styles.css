@@ -10,96 +10,22 @@ body {
   font-family: sans-serif;
 }
 
-
-
 .grid-container {
   display: grid;
   grid-template-areas:
     'header header header'
     'left middle right'
     'footer footer footer';
-  grid-gap: 10px;
+  
   background-color: #2196F3;
   padding: 10px;
+  align-content: space-between;
 }
 
 .header {
   grid-area: header;
   background-color: lightseagreen;
-}
-
-#indexBody-middle {
-  grid-area: middle;
-  padding: 20px;
-  height: 200px;
-  text-align: center;
-}
-
-.left {
-  grid-area: left;
-  padding: 20px;
-  height: 200px;
-  text-align: center;
-  background-color: rgba(224, 19, 19, 0.6);
-}
-
-.right {
-  grid-area: right;
-  padding: 20px;
-  height: 200px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.footer {
-  grid-area: footer;
-  background-color: rgba(255, 255, 255, 0.3);
   padding: 10px;
-  text-align: center;
-}
-
-#form {
-  background: rgba(255, 255, 255, 0.6);
-  margin: 10% 30% 15%;
-  text-align: center;
-  border-radius: 5px;
-  
-}
-
-#loginBtn{
-  text-align: right;
-  padding: 1em;
-}
-
-#btn {
-  padding: 0.5em 2em 0.5em 2em;
-  border-radius: 5px;
-  border: none;
-}
-
-#btn:hover, #btn:focus {
-  background: rgba(0, 255, 21, 0.6);
-}
-
-
-#loginTitle {
-  padding: 1em;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-#errorBody {
-  background-image: url("image/errorPage.png");
-  background-position: center;
-}
-
-#errorMessage {
-  text-align: center;
-  padding-top: 10%;
-}
-
-#loginBody {
-  background-image: url("image/login\ background.jpg");
-  background-position: center;
 }
 
 #navigation {
@@ -120,7 +46,83 @@ body {
   border-style: solid none none none;
 }
 
-
 #navigation a:hover, #navigation a:focus {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+#form {
+  background: rgba(255, 255, 255, 0.6);
+  margin: 10% 30% 15%;
+  text-align: center;
+  border-radius: 5px;
+  
+}
+
+#indexBody-middle {
+  grid-area: middle;
+  padding: 10px;
+  height: 200px;
+  text-align: center;
+}
+
+.left {
+  grid-area: left;
+  height: 200px;
+  text-align: center;
+  background-color: rgba(224, 19, 19, 0.6);
+}
+
+.right {
+  grid-area: right;
+  height: 200px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  
+}
+
+#loginBtn{
+  text-align: right;
+  padding: 1em;
+}
+
+#btn {
+  padding: 0.5em 2em 0.5em 2em;
+  border-radius: 5px;
+  border: none;
+}
+
+#btn:hover, #btn:focus {
+  background: rgba(0, 255, 21, 0.6);
+}
+
+#loginTitle {
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#loginBody {
+  background-image: url("image/login\ background.jpg");
+  background-position: center;
+}
+
+#errorBody {
+  background-image: url("image/errorPage.png");
+  background-position: center;
+}
+
+#errorMessage {
+  text-align: center;
+  padding-top: 10%;
+}
+
+
+
+
+
+
