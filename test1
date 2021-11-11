@@ -33,24 +33,24 @@
             echo
             "<div class='form'>
              <h3>Incorrect Username/Password</h3></br>
-             <p class='link'>Click here to<a href='login.php'>Login</a>again.</div>
+             <p class='link'>Click here to<a href='login.php'>Login</a> again.</p>
              </div>'";
         }
         
     } else {
     ?>
     
-    <form name="login" action=""  method="post">
+    <form name="loginForm" action="" onsubmit="return validation()" method="post">
     <h1 id="loginTitle">Login</h1>
           <p>
             <label id="lblUsername">Username: </label>
-            <input type="text" id="user" name="username"required title="Je weet het vast wel ;)"
+            <input type="text" id="user" name="user"required title="Je weet het vast wel ;)"
               oninvalid="this.setCustomValidity('Vul ff in joh ^^')"
               onchange="this.setCustomValidity('')"/>
           </p>
           <p>
             <label id="lblPassword">Password: </label>
-            <input type="password" id="pass" name="password" 
+            <input type="password" id="pass" name="pass" 
               required title="Deze is lastiger hea, al die keepass achtige applicaties tegenwoordig."
               oninvalid="this.setCustomValidity('Vergeet je deze ook niet? ^^')"
               onchange="this.setCustomValidity('')"/>
