@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -53,16 +55,9 @@ body {
   border-style: ridge none;
 }
 
-#navigation a:hover, #navigation a:focus {
+#navigation a:hover,
+#navigation a:focus {
   background-color: rgba(255, 255, 255, 0.3);
-}
-
-#form {
-  background: rgba(255, 255, 255, 0.6);
-  margin: 10% 30% 15%;
-  text-align: center;
-  border-radius: 5px;
-  
 }
 
 #indexBody-middle {
@@ -74,7 +69,7 @@ body {
 }
 
 section {
- display: grid;
+  display: grid;
 }
 
 .left {
@@ -103,16 +98,10 @@ section {
   text-align: center;
 }
 
-#form {
+.loginBar-inline {
   background: rgba(255, 255, 255, 0.6);
-  margin: 10% 30% 15%;
   text-align: center;
-  border-radius: 5px;
-}
-
-#loginBtn {
-  text-align: right;
-  padding: 1em;
+  margin: 1em;
 }
 
 #btn {
@@ -130,21 +119,71 @@ section {
   background: rgba(0, 255, 21, 0.8);
 }
 
-#loginTitle {
-  padding: 1em;
-  background: rgba(255, 255, 255, 0.3);
-  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+.loginBar-inline {
+  margin-top: 10vh;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 30px/90px;
 }
 
-#user, #pass  {
-  /* background-color: transparent; */
+#registrationLink {
+  text-align: right;
+}
+
+.loginBar-inline input {
+  height: 32px;
+}
+
+
+
+@media (max-width: 790px) {
+  .loginBar-inline input {
+    height: 40px;
+    align-self: stretch;
+  }
+
+  .loginBar-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #user,
+  #pass {
+    text-align: center;
+    margin: 1em;
+  }
+
+  .loginButtons {
+    margin: 1em;
+  }
+  
+  .loginButtons #registrationLink {
+    width: 30%;
+    margin: 0.5em;
+  }
+  .loginButtons #loginBtn {
+    width: 60%;
+    margin: 0.5em;
+  }
+}
+
+#user,
+#pass {
+  background-color: transparent;
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 5px;
+  vertical-align: middle;
 }
 
-/* #user, #user:hover, #user:focus, #pass, #pass:hover, #pass:focus { */
+#user:hover, #user:focus, #pass:hover, #pass:focus {
+  outline: 8px dashed mix( 0 0 3px #ff0000, 0 0 5px #0000ff);
+ 
+}
 
-#user:hover input{
-  color: #0000FF;
+#user:hover input {
+  color: #0000ff;
 }
 
 #loginBody {
@@ -165,22 +204,31 @@ section {
 #loginBody {
   background-image: url("image/loginBackground.jpg");
   background-position: center;
-  min-height: 1px; 
+  min-height: 1px;
+}
+
+#lblLogin {
+  font-size: 3em;
+
+  padding: 0.5em;
+  vertical-align: middle;
+  text-align: center;
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
 }
 
 #lblUsername {
-  font-size: 20px;
-  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  font-size: 1.5em;
+  padding: 0.5em;
+  vertical-align: middle;
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
 }
-
-
 
 #lblPassword {
-  font-size: 20px;
-  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  font-size: 1.5em;
+  padding: 0.5em;
+  vertical-align: middle;
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
 }
-
-
 
 #navigation a:hover,
 #navigation a:focus {
