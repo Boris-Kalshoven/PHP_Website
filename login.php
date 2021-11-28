@@ -32,28 +32,28 @@
     } else {
       echo
       "<div class='form'>
-             <h3>Incorrect Username/Password</h3></br>
-             <p class='link'>Click here to<a href='login.php'>Login</a>again.</div>
-             </div>'";
+          <h3>Incorrect Username/Password</h3></br>
+          <p class='link'>Click here to<a href='login.php'>Login</a>again.</div>
+       </div>'";
     }
   } else {
   ?>
     <form class="loginBar-inline" name="login" action="" method="post">
-    
         <label id="lblLogin">Login</label>
-        <label id="lblUsername">Username: </label>
+        <label id="lblUsername">Username </label>
         <input type="text" id="user" name="username" required title="Je weet het vast wel ;)" oninvalid="this.setCustomValidity('Vul ff in joh ^^')" onchange="this.setCustomValidity('')" />
 
-        <label id="lblPassword">Password: </label>
+        <label id="lblPassword">Password </label>
         <input type="password" id="pass" name="password" required title="Deze is lastiger hea, al die keepass achtige applicaties tegenwoordig." oninvalid="this.setCustomValidity('Vergeet je deze ook niet? ^^')" onchange="this.setCustomValidity('')" />
 
         <div class="loginButtons">
-        <a href="registration.php" id="registrationLink">New Registration</a>
-        <input type="submit" id="loginBtn" value="Login" />
-        </div>
-      </div>
-      
+          <input type="submit" id="loginBtn" value="Login" />
+          <a href="registration.php" id="registrationLink">New Registration</a> 
+        </div>     
     </form>
+
+    
+
     <script>
       function validation() {
         // get the value from the form to validate
