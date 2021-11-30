@@ -38,12 +38,19 @@
     } else {
     ?>
         <form class="registration-form" action="" method="post">
-            <h1 class="login-title">Registration</h1>
-            <input type="text" class="registration-input" name="reg-username" placeholder="Username" required />
-            <input type="text" class="registration-input" name="reg-email" placeholder="Email Adress">
-            <input type="password" class="registration-input" name="reg-password" placeholder="Password">
-            <input type="submit" name="reg-submit" value="Register" class="registration-button">
-            <p><a href="login.php"><<< Back to Login</a></p>
+            <label id="lblRegistrationTitle">Registration</label>
+            
+            <label id="lblUsername">Username</label>
+            <input type="text" class="registration-input" name="reg-username" placeholder="Username" required title="Verzin maar een mooie username." oninvalid="this.setCustomValidity('Vul ff in joh ^^')" onchange="this.setCustomValidity('')"  />
+            <label id="lblEmail">Email Address</label>
+            <input type="text" class="registration-input" name="reg-email" placeholder="Email Address" required title="Wel een echte email gebruiken hea!" oninvalid="this.setCustomValidity('Vul ff in joh ^^')" onchange="this.setCustomValidity('')">
+            <label id="lblPassword">Password </label>
+            <input type="password" class="registration-input" name="reg-password" placeholder="Password" required title="Tip: 4 random woorden die je goed weet te onthouden" oninvalid="this.setCustomValidity('Vul ff in joh ^^')" onchange="this.setCustomValidity('')">
+
+            <div class="registrationButtons">
+                <input type="submit" id="registerBtn" name="reg-submit" value="Register" class="registration-button">
+                <a href="login.php" id="backToLoginBtn" ><<< Back to Login</a>
+            </div>
         </form>
     <?php
     }
