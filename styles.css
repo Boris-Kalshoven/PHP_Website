@@ -27,12 +27,18 @@ body {
     "footer footer footer";
   grid-gap: 10px;
   background-color: #2196f3;
+  
 }
 
 .header {
   grid-area: header;
   background-color: lightseagreen;
   padding: 10px;
+}
+
+#navigation a:hover,
+#navigation a:focus {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 #navigation {
@@ -61,10 +67,11 @@ body {
 
 #indexBody-middle {
   grid-area: middle;
-  padding: 10px;
   height: 200px;
   text-align: center;
-  background-color: aquamarine;
+  box-shadow: 0px 0px 10px 0px rgba(255, 32, 255, 1) inset;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 32, 255, 1) inset;
+  -moz-box-shadow: 0px 0px 10px 0px rgba(255, 32, 255, 1) inset;
 }
 
 section {
@@ -96,6 +103,105 @@ section {
   left: 0;
   text-align: center;
 }
+
+/* Registration-begin */
+#registrationBody {
+  background-image: url("image/loginBackground.jpg");
+  background-position: center;
+  min-height: 1px;
+}
+
+#lblRegistrationTitle {
+  font-size: 3em;
+  padding: 0.5em;
+  vertical-align: middle;
+  text-align: center;
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+}
+
+.registration-form .registration-input {
+  margin: 1em;
+  padding: 0.5em;
+  background-color: transparent;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  vertical-align: middle;
+  border: none;
+  height: 40px;
+}
+.registration-form .registration-input:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+}
+.registration-form .registration-input:active {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+}
+.registration-form .registration-input:focus {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+}
+
+.registration-form .registration-button {
+  margin: 0.5em;
+  padding: 0.5em;
+  width: 175px;
+  border-radius: 10px;
+  border: none;
+  width: 60%;
+  margin: 0.5em;
+  height: 40px;
+}
+a {
+  text-decoration: none;
+}
+
+.registrationButtons {
+  margin: 1em;
+}
+
+.registrationButtons #registrationButton {
+  width: 30%;
+  margin: 0.5em;
+}
+.registrationButtons #backToLoginBtn {
+  width: 60%;
+  margin: 0.5em;
+}
+
+@media (min-width: 790px) {
+  .registration-form {
+    background: rgba(255, 255, 255, 0.6);
+    margin: 1em;
+    margin-top: 10vh;
+    display: flex;
+    flex-flow: column;
+    text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1em;
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 790px) {
+  .registration-form {
+    background: rgba(255, 255, 255, 0.6);
+    margin: 1em;
+    margin-top: 10vh;
+    display: flex;
+    flex-flow: column;
+    text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1em;
+    align-self: stretch;
+  }
+}
+
+/* Registration-end */
+
+/* Login-Begin */
 
 .loginBar-inline {
   background: rgba(255, 255, 255, 0.6);
@@ -133,95 +239,6 @@ section {
   height: 32px;
 }
 
-/* Registration-begin */
-#registrationBody {
-  background-image: url("image/loginBackground.jpg");
-  background-position: center;  
-  min-height: 1px;
-}
-@media (max-width: 790px) {
-
-  .registration-form {
-    background: rgba(255, 255, 255, 0.6);
-    margin: 1em;
-    margin-top: 10vh;
-    display: flex;
-    flex-flow: column;
-    text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 1em;
-    align-self: stretch;
-
-    
-  }
-
-  #lblRegistrationTitle{
-    font-size: 3em;
-
-    padding: 0.5em;
-    vertical-align: middle;
-    text-align: center;
-    text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
-  }
-
-  .registration-form .registration-input {
-    margin: 1em;
-    padding: 0.5em;
-    background-color: transparent;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 5px;
-    vertical-align: middle;
-    border: none;
-    height: 40px;
-  }
-  .registration-form .registration-input:hover {
-    background: rgba(255, 255, 255, 0.8);
-    border: none;
-
-  }
-  .registration-form .registration-input:active {
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
-  }
-  .registration-form .registration-input:focus {
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
-  }
-
-  .registration-form .registration-button {
-    margin: 0.5em;
-    padding: 0.5em;
-    width: 175px;
-    border-radius: 10px;
-    border: none;
-    width: 60%;
-    margin: 0.5em;
-    height: 40px;
-  }
-  a {
-    text-decoration: none;
-  }
-
-  .registrationButtons {
-    margin: 1em;
-  }
-
-  .registrationButtons #registrationButton {
-    width: 30%;
-    margin: 0.5em;
-  }
-  .registrationButtons  #backToLoginBtn {
-    width: 60%;
-    margin: 0.5em;
-  }
-
- 
-
-}
-
-/* Registration-end */
-
-/* Login-Begin */
 #user:hover,
 #pass:hover {
   background: rgba(255, 255, 255, 0.8);
@@ -270,7 +287,7 @@ section {
   .loginBar-inline {
     flex-direction: column;
     align-items: stretch;
-   border-radius: 1em;
+    border-radius: 1em;
   }
   #user,
   #pass {
@@ -316,8 +333,6 @@ section {
   background-position: center;
 }
 
-
-
 #errorBody {
   background-image: url("image/errorPage.png");
   background-position: center;
@@ -362,7 +377,12 @@ section {
 
 /* Login-End */
 
-#navigation a:hover,
-#navigation a:focus {
-  background-color: rgba(255, 255, 255, 0.3);
+/* Profile-Begin */
+#profileBody {
+ 
+  background: #6c00e4;
+background: repeating-radial-gradient(ellipse farthest-side at bottom right, #6c00e4 0%, #0afbe2 20%);
+background: -webkit-repeating-radial-gradient(ellipse farthest-side at bottom right, #6c00e4 0%, #0afbe2 20%);
+background: -moz-repeating-radial-gradient(ellipse farthest-side at bottom right, #6c00e4 0%, #0afbe2 20%);
 }
+/* Profile-End */

@@ -48,8 +48,13 @@
 
         <div class="loginButtons">
           <input type="submit" id="loginBtn" value="Login" />
-          <a href="registration.php" id="registrationLink">New Registration</a> 
+         
         </div>     
+        <div class="loginButtons">
+          
+        <a href="registration.php" id="registrationLink">New Registration</a> 
+        </div>     
+        
     </form>
 
     
