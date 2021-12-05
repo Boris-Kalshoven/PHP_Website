@@ -63,6 +63,8 @@ include_once('dbconnection.php');
                 while($row = mysqli_fetch_assoc($result)){
                     echo  $row['subject'] . "\t" . $row['content'] . "\t".  $row['date'] . "<br>";
                 }
+            }else{
+                echo "Wat is het nog leeg hier. Plaats nu het eerste bericht en een gesprek met alle gebruikers";
             }
 
 
